@@ -54,13 +54,19 @@ export default function Weather() {
         {form}
         <h2>{city}</h2>
         <h3>
-          {Math.round(temperature)}
-          <a href="#">°C</a> | <a href="#">°F</a>
+          {Math.round(temperature)} {"    "}
+          <a className="degrees" href="#">
+            °C
+          </a>{" "}
+          |{" "}
+          <a className="degrees" href="#">
+            °F
+          </a>
         </h3>
-        {description}
-        <img src={icon} alt={description} />
-        <h4>{Math.round(humidity)}%</h4>
-        <h4>{Math.round(wind)} km/hr</h4>
+        <h3 className="Description">{description}</h3>
+        <img className="Icon" src={icon} alt={description} />
+        <h4>Humidity: {Math.round(humidity)}%</h4>
+        <h4>Winds: {Math.round(wind)} km/hr</h4>
       </div>
     );
   } else {

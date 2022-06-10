@@ -11,9 +11,13 @@ h1 {
   border: solid #34495e 3px;
   line-height: 50px;
 }
-.search-bar {
-  width: 300px;
+h4 {
+  font-weight: normal;
+  position: relative;
+  top: -160px;
+  left: 150px;
 }
+
 form {
   max-width: 100%;
   padding-bottom: 30px;
@@ -23,6 +27,9 @@ input {
   max-width: 100%;
   padding: 10px;
   margin: 10px;
+}
+.search-bar {
+  width: 300px;
 }
 .submit-button {
   background-color: #22313f;
@@ -35,4 +42,19 @@ input {
   color: #22313f;
   border: solid 1px #22313f;
   border-radius: 5px;
+}
+.Description {
+  position: relative;
+  top: -40px;
+  left: 150px;
+  color: #48484a;
+}
+.Icon {
+  position: relative;
+  top: -55px;
+}
+.degrees {
+  font-size: 14px;
+  position: relative;
+  top: -4px;
 }
