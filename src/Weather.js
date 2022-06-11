@@ -55,11 +55,11 @@ export default function Weather() {
         <h2>{city}</h2>
         <h3>
           {Math.round(temperature)} {"    "}
-          <a className="degrees" href="#">
+          <a className="degrees" href="/">
             °C
           </a>{" "}
           |{" "}
-          <a className="degrees" href="#">
+          <a className="degrees" href="/">
             °F
           </a>
         </h3>
