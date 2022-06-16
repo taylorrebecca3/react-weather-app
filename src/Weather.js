@@ -3,12 +3,8 @@ import "./weather.css";
 import axios from "axios";
 
 export default function Weather() {
+  const [weather, SetWeather] = useState({});
   let [city, setCity] = useState("");
-  let [temperature, setTemperature] = useState("");
-  let [description, setDescription] = useState("");
-  let [humidity, setHumidity] = useState("");
-  let [wind, setWind] = useState("");
-  let [icon, setIcon] = useState("");
 
   const form = (
     <form onSubmit={changeCity}>
@@ -30,13 +26,14 @@ export default function Weather() {
   );
 
   function getWeather(response) {
-    setTemperature(response.data.main.temp);
-    setDescription(response.data.weather[0].main);
-    setHumidity(response.data.main.humidity);
-    setWind(response.data.wind.speed);
-    setIcon(
-      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-    );
+    SetWeather({
+      temperature: response.data.main.temp,
+      description: response.data.weather[0].main,
+      humidity: response.data.main.humidity,
+      wind: response.data.wind.speed,
+      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      name: response.data.name,
+    });
   }
 
   function changeCity(event) {
@@ -48,13 +45,13 @@ export default function Weather() {
     setCity(event.target.value);
   }
 
-  if (temperature) {
+  if (weather.temperature) {
     return (
       <div className="Weather">
         {form}
-        <h2>{city}</h2>
+        <h2>{weather.name}</h2>
         <h3>
-          {Math.round(temperature)} {"    "}
+          {Math.round(weather.temperature)} {"    "}
           <a className="degrees" href="/">
             °C
           </a>{" "}
@@ -63,10 +60,10 @@ export default function Weather() {
             °F
           </a>
         </h3>
-        <h3 className="Description">{description}</h3>
-        <img className="Icon" src={icon} alt={description} />
-        <h4>Humidity: {Math.round(humidity)}%</h4>
-        <h4>Winds: {Math.round(wind)} km/hr</h4>
+        <h3 className="Description">{weather.description}</h3>
+        <img className="Icon" src={weather.icon} alt={weather.description} />
+        <h4>Humidity: {Math.round(weather.humidity)}%</h4>
+        <h4>Winds: {Math.round(weather.wind)} km/hr</h4>
       </div>
     );
   } else {

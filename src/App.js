@@ -8,10 +8,16 @@ export default function App() {
       <Banner />
       <Weather />
       <footer>
-        <a href="https://github.com/taylorrebecca3/react-weather-app">
+        <a
+          href="https://github.com/taylorrebecca3/react-weather-app"
+          target="_blank"
+        >
           Open-sourced code
         </a>{" "}
-        by <a href="https://github.com/taylorrebecca3">Rebecca Taylor</a>
+        by{" "}
+        <a href="https://github.com/taylorrebecca3" target="_blank">
+          Rebecca Taylor
+        </a>
       </footer>
     </div>
   );
