@@ -2,7 +2,7 @@ import "./App.css";
 import Weather from "./Weather";
 import Banner from "./Banner";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <Banner />
@@ -16,5 +16,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
