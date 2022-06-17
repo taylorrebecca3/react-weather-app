@@ -11,11 +11,16 @@ export default function App() {
         <a
           href="https://github.com/taylorrebecca3/react-weather-app"
           target="_blank"
+          rel="noreferrer"
         >
           Open-sourced code
         </a>{" "}
         by{" "}
-        <a href="https://github.com/taylorrebecca3" target="_blank">
+        <a
+          href="https://github.com/taylorrebecca3"
+          target="_blank"
+          rel="noreferrer"
+        >
           Rebecca Taylor
         </a>
       </footer>

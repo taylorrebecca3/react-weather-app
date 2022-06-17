@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import "./weather.css";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
 
 export default function Weather() {
-  const [weather, SetWeather] = useState({});
+  const [weather, SetWeather] = useState({ ready: false });
   let [city, setCity] = useState("");
 
   const form = (
@@ -27,7 +28,9 @@ export default function Weather() {
 
   function getWeather(response) {
     SetWeather({
+      ready: true,
       temperature: response.data.main.temp,
+      date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].main,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
@@ -50,6 +53,10 @@ export default function Weather() {
       <div className="Weather">
         {form}
         <h2>{weather.name}</h2>
+        <h3>
+          <FormattedDate date={weather.date} />
+        </h3>
+
         <h3>
           {Math.round(weather.temperature)} {"    "}
           <a className="degrees" href="/">
