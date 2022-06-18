@@ -6,31 +6,29 @@ h1 {
   border: solid #34495e 3px;
   line-height: 50px;
 }
+h2 {
+  font-weight: bold;
+}
+h3 {
+  margin-top: 0px;
+  font-size: 15px;
+}
 h4 {
   font-weight: normal;
+  font-size: 15px !important;
   color: #22313f;
-  position: relative;
-  top: -100px;
-  left: 150px;
 }
+
 .WeatherInfo {
-  margin-left: 15px;
+  margin: 0;
+  padding: 0;
   color: #22313f;
 }
 .Description {
-  position: relative;
-  top: -40px;
-  left: 150px;
   color: #48484a;
 }
-
-.degrees {
-  font-size: 14px;
+.row {
   position: relative;
-  top: -4px;
-}
-.temperature {
-  position: relative;
-  font-size: 18px;
-  top: 15px;
+  top: -70px;
+  left: 10px;
 }

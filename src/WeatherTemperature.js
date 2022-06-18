@@ -15,25 +15,25 @@ export default function WeatherTemperature(props) {
   if (unit === "metric") {
     return (
       <div className="WeatherTemperature">
-        <h3 className="temperature">
+        <span className="temperature">
           {Math.round(props.celsius)} {"    "} °C |{" "}
           <a className="degrees" href="/" onClick={convertToFahrenheit}>
             °F
           </a>
-        </h3>
+        </span>
       </div>
     );
   } else {
     let fahrenheit = (props.celsius * 9) / 5 + 32;
     return (
       <div className="WeatherTemperature">
-        <h3 className="temperature">
+        <span className="temperature">
           {Math.round(fahrenheit)} {"    "}
           <a className="degrees" href="/" onClick={convertToMetric}>
             °C
           </a>{" "}
           | °F
-        </h3>
+        </span>
       </div>
     );
   }

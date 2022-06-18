@@ -8,7 +8,7 @@ export default function Weather() {
   let [city, setCity] = useState("");
 
   const form = (
-    <form onSubmit={changeCity}>
+    <form className="m-3" onSubmit={changeCity}>
       <input
         className="search-bar"
         type="text"
@@ -17,11 +17,10 @@ export default function Weather() {
         onChange={updateCity}
       />
       <br />
-      <input type="submit" value="Take me there" className="submit-button" />
       <input
         type="submit"
-        value="Current Location"
-        className="current-button"
+        value="Take me there"
+        className="submit-button mt-4 "
       />
     </form>
   );
