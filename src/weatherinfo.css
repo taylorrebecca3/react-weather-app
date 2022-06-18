@@ -8,12 +8,14 @@ h1 {
 }
 h4 {
   font-weight: normal;
+  color: #22313f;
   position: relative;
   top: -100px;
   left: 150px;
 }
 .WeatherInfo {
   margin-left: 15px;
+  color: #22313f;
 }
 .Description {
   position: relative;
