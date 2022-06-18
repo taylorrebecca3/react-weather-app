@@ -3,24 +3,10 @@
   font-family: Arial, Helvetica, sans-serif;
   font-weight: normal;
 }
-h1 {
-  text-align: center;
-  color: #22313f;
-  size: 150px;
-  padding: 20px;
-  border: solid #34495e 3px;
-  line-height: 50px;
-}
-h4 {
-  font-weight: normal;
-  position: relative;
-  top: -160px;
-  left: 150px;
-}
 
 form {
   max-width: 100%;
-  padding-bottom: 30px;
+  padding-bottom: 5px;
   padding-top: 20px;
 }
 input {
@@ -42,19 +28,4 @@ input {
   color: #22313f;
   border: solid 1px #22313f;
   border-radius: 5px;
-}
-.Description {
-  position: relative;
-  top: -40px;
-  left: 150px;
-  color: #48484a;
-}
-.Icon {
-  position: relative;
-  top: -55px;
-}
-.degrees {
-  font-size: 14px;
-  position: relative;
-  top: -4px;
 }

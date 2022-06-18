@@ -1,5 +1,7 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
+import WeatherIcon from "./WeatherIcon";
+import "./weatherinfo.css";
 
 export default function WeatherInfo(props) {
   return (
@@ -9,7 +11,7 @@ export default function WeatherInfo(props) {
         <FormattedDate date={props.info.date} />
       </h3>
 
-      <h3>
+      <h3 className="temperature">
         {Math.round(props.info.temperature)} {"    "}
         <a className="degrees" href="/">
           °C
@@ -20,11 +22,8 @@ export default function WeatherInfo(props) {
         </a>
       </h3>
       <h3 className="Description">{props.info.description}</h3>
-      <img
-        className="Icon"
-        src={props.info.icon}
-        alt={props.info.description}
-      />
+      <WeatherIcon code={props.info.icon} />
+
       <h4>Humidity: {Math.round(props.info.humidity)}%</h4>
       <h4>Winds: {Math.round(props.info.wind)} km/hr</h4>
     </div>
