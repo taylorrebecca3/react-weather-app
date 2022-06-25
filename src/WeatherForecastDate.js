@@ -9,12 +9,13 @@ export default function WeatherForecastDate(props) {
     return days[day];
   }
   return (
-    <div className="WeatherForecastDate">
+    <div className="WeatherForecastDate text-center">
       <h4>{day()}</h4>
-      <h5>
-        {Math.round(props.data.temp.max)}° | {Math.round(props.data.temp.min)}°
-      </h5>
-      <WeatherIcon code={props.data.weather[0].icon} />
+      <p>
+        {Math.round(props.data.temp.max)}°{" "}
+        <span className="opacity-75">| {Math.round(props.data.temp.min)}°</span>
+      </p>
+      <WeatherIcon code={props.data.weather[0].icon} size={32} />
     </div>
   );
 }
